@@ -21,7 +21,7 @@ def packet_handler(packet):
             print(f"TCP Segment: Src Port: {tcp_layer.sport}, Dst Port: {tcp_layer.dport}")
             print(f"Flags: {tcp_layer.flags}")
 
-        # Check if the packet has a UDP layer
+        # Check if the packet has a UDP layer/
         elif packet.haslayer(UDP):
             udp_layer = packet[UDP]
             print(f"UDP Datagram: Src Port: {udp_layer.sport}, Dst Port: {udp_layer.dport}")
